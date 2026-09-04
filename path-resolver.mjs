@@ -12,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
  * @returns {string} Absolute path to the data root
  */
 export function getCareerOpsRoot() {
-  const env = process.env.CAREER_OPS_ROOT?.trim() || process.env.CAREER_OPS_DATA_DIR?.trim();
+  const env = process.env.CAREER_OPS_DATA_DIR?.trim() || process.env.CAREER_OPS_ROOT?.trim();
   if (env) {
     return resolve(__dirname, env);
   }
