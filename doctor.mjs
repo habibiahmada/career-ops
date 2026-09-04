@@ -145,7 +145,7 @@ function checkBillingSource() {
 }
 
 function checkDependencies() {
-  if (existsSync(join(projectRoot, 'node_modules'))) {
+  if (existsSync(join(projectRoot, 'node_modules')) || existsSync(join(__dirname, 'node_modules'))) {
     return { pass: true, label: 'Dependencies installed' };
   }
   return {
